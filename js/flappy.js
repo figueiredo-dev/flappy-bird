@@ -15,10 +15,6 @@ function Barrier(reverse = false) {
   this.setHeight = height => body.style.height = `${height}px`;
 }
 
-// const b = new Barrier(true);
-// b.setHeight(300);
-// document.querySelector('[wm-flappy]').appendChild(b.element);
-
 function DoubleBarrier(height, gap, x) {
   this.element = newElement('div', 'par-de-barreiras');
 
@@ -42,9 +38,6 @@ function DoubleBarrier(height, gap, x) {
   this.randomGap();
   this.setX(x);
 }
-
-// const b = new DubleBarrier(700, 200, 400);
-// document.querySelector('[wm-flappy]').appendChild(b.element);
 
 function Barriers(height, width, gap, space, notifyScore) {
   this.doubles = [
@@ -106,17 +99,6 @@ function Progress() {
   }
   this.updateScore(0);
 }
-
-// const barriers = new Barriers(450, 1000, 200, 400);
-// const bird = new Bird(450);
-// const gameArea = document.querySelector('[wm-flappy]');
-// gameArea.appendChild(bird.element);
-// gameArea.appendChild(new Progress().element);
-// barriers.doubles.forEach(double => gameArea.appendChild(double.element));
-// setInterval(() => {
-//   barriers.animate();
-//   bird.animate();
-// }, 20);
 
 function overlapping(elementA, elementB) {
   const a = elementA.getBoundingClientRect();
