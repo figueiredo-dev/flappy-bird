@@ -125,6 +125,11 @@ function crash(bird, barriers) {
   return crash;
 }
 
+function Button(start = false) {
+  this.element = newElement('button', 'button');
+  this.element.innerHTML = start ? 'Start' : 'Try Again';
+}
+
 function FlappyBird() {
   let score = 0;
 
@@ -138,8 +143,9 @@ function FlappyBird() {
   const bird = new Bird(height);
 
   gameArea.appendChild(progress.element)
-  gameArea.appendChild(bird.element);
-  barriers.doubles.forEach(double => gameArea.appendChild(double.element));
+  // gameArea.appendChild(bird.element);
+  // barriers.doubles.forEach(double => gameArea.appendChild(double.element));
+  gameArea.appendChild(new Button(false).element);
 
   this.start = () => {
     const timer = setInterval(() => {
